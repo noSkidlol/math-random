@@ -1,5 +1,4 @@
-local Lib = {}
-local Name = getgenv().SaveName
+local Name = getgenv().SaveName or _G.SaveName
 local Description = {}
 if makefolder then
     makefolder("Portal Hub")
@@ -11,7 +10,8 @@ if not pcall(function() readfile("Portal Hub//" .. Name) end) then
 end
 
 Settings = game:GetService("HttpService"):JSONDecode(readfile("Portal Hub//" .. Name))
-function Lib:Save()
+
+local function KFJXOAA()
     writefile("Portal Hub//" .. Name, game:GetService("HttpService"):JSONEncode(Settings))
 end
-return Lib
+
