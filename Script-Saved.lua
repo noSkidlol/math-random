@@ -10,7 +10,7 @@ if not pcall(function() readfile("Portal Hub//" .. Name) end) then
     writefile("Portal Hub//" .. Name, game:GetService("HttpService"):JSONEncode(Description))
 end
 
-Settings = game:GetService("HttpService"):JSONDecode(readfile("Portal Hub//" .. Name)
+Settings = game:GetService("HttpService"):JSONDecode(readfile("Portal Hub//" .. Name))
 function Lib:Save()
     writefile("Portal Hub//" .. Name, game:GetService("HttpService"):JSONEncode(Settings))
 end
